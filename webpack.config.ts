@@ -1,0 +1,43 @@
+import * as path from "path";
+import * as webpack from "webpack";
+import * as ngrok from "ngrok";
+import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
+
+const DIST_DIR = path.resolve(__dirname, "dist");
+const SRC_DIR = path.resolve(__dirname, "src");
+
+const config: webpack.Configuration = {
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: [
+          {
+            loader: "ts-loader",
+            options: {
+              allowTsInNodeModules: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".js", ".json", ".jsx", ".ts", ".tsx"],
+  },
+  devServer: {
+    contentBase: [DIST_DIR, SRC_DIR],
+    https: true,
+    after: async (app, server, compiler) => {
+      const url = await ngrok.connect(compiler.options.devServer?.port || 8080);
+      console.log("---");
+      console.log("Development URL:", url);
+      console.log("---");
+    },
+    stats: "errors-only",
+    noInfo: true,
+  },
+  plugins: [new FriendlyErrorsWebpackPlugin()],
+};
+
+export default config;
