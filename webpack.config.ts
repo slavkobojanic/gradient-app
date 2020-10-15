@@ -28,14 +28,14 @@ const config: webpack.Configuration = {
   devServer: {
     contentBase: [DIST_DIR, SRC_DIR],
     https: true,
+    stats: "errors-only",
+    noInfo: true,
     after: async (app, server, compiler) => {
       const url = await ngrok.connect(compiler.options.devServer?.port || 8080);
       console.log("---");
       console.log("Development URL:", url);
       console.log("---");
     },
-    stats: "errors-only",
-    noInfo: true,
   },
   plugins: [new FriendlyErrorsWebpackPlugin()],
 };
