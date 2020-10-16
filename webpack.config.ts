@@ -2,6 +2,7 @@ import * as path from "path";
 import * as webpack from "webpack";
 import * as ngrok from "ngrok";
 import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
+import * as shell from "shelljs";
 
 const DIST_DIR = path.resolve(__dirname, "dist");
 const SRC_DIR = path.resolve(__dirname, "src");
@@ -30,8 +31,13 @@ const config: webpack.Configuration = {
     https: true,
     stats: "errors-only",
     noInfo: true,
+    disableHostCheck: true,
     after: async (app, server, compiler) => {
-      const url = await ngrok.connect(compiler.options.devServer?.port || 8080);
+      const port = compiler.options.devServer?.port || 8080;
+      const url = await ngrok.connect({
+        host: "http",
+        addr: `https://localhost:${port}`,
+      });
       console.log("---");
       console.log("Development URL:", url);
       console.log("---");
