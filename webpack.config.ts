@@ -2,7 +2,6 @@ import * as path from "path";
 import * as webpack from "webpack";
 import * as ngrok from "ngrok";
 import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
-import * as shell from "shelljs";
 
 const DIST_DIR = path.resolve(__dirname, "dist");
 const SRC_DIR = path.resolve(__dirname, "src");
