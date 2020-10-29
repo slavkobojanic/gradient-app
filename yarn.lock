@@ -888,10 +888,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@canva/editing-extensions-api-typings@^0.0.80-alpha.0":
-  version "0.0.80-alpha.0"
-  resolved "https://registry.yarnpkg.com/@canva/editing-extensions-api-typings/-/editing-extensions-api-typings-0.0.80-alpha.0.tgz#d24b679aea7bd50b0514a8d36c37be5c092c75b7"
-  integrity sha512-t0YcI/20zQjqB+3qNiSCyeEzETM+jHfMwYhCVYKPUajovRUewg7fqgswjOQP356nf5X/fmkNn94WNHL0rn+BXw==
+"@canva/editing-extensions-api-typings@^0.0.88-alpha.0":
+  version "0.0.82-alpha.0"
+  resolved "https://registry.yarnpkg.com/@canva/editing-extensions-api-typings/-/editing-extensions-api-typings-0.0.82-alpha.0.tgz#e709bd8055c62769c9a756f5e593fd238a3c1d6c"
+  integrity sha512-JVwVJelZZbJbJtYAFGRoaloOTfyRY9pzHE/rpFrhQWBEeKyeS0plJ12RIk4/C1TNlitwbXSE6RkdvgalBEYdjg==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"

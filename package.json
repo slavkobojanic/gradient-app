@@ -5,7 +5,7 @@
   "author": "David Turnbull <david.t@canva.com>",
   "license": "MIT",
   "devDependencies": {
-    "@canva/editing-extensions-api-typings": "^0.0.80-alpha.0",
+    "@canva/editing-extensions-api-typings": "^0.0.82-alpha.0",
     "@types/friendly-errors-webpack-plugin": "^0.1.2",
     "@types/react": "^16.9.52",
     "@types/webpack": "^4.41.22",
