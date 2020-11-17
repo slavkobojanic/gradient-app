@@ -24,7 +24,8 @@
   },
   "scripts": {
     "build": "webpack --config ./webpack.config.ts --mode production",
-    "start": "webpack serve --config ./webpack.config.ts --mode development"
+    "start": "webpack serve --config ./webpack.config.ts --mode development",
+    "ngrok": "ngrok http 3000 -subdomain slavko"
   },
   "husky": {
     "hooks": {
