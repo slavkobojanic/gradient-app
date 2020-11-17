@@ -5,13 +5,13 @@
 Clone the repository:
 
 ```bash
-git clone https://github.com/canvanauts/davidturnbull-frontend-extension-typescript-boilerplate my-extension
+git clone https://github.com/slavkobojanic/gradient-app 
 ```
 
 Navigate into the cloned directory:
 
 ```bash
-cd my-extension
+cd gradient-app 
 ```
 
 Install the dependencies:

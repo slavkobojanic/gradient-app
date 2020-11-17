@@ -33,11 +33,7 @@ const config: webpack.Configuration = {
     disableHostCheck: true,
     after: async (app, server, compiler) => {
       const port = compiler.options.devServer?.port || 8080;
-      await ngrok.authtoken(
-        "1ZeSA8C1SOhTu0ZJqSQAhXDMHyp_4Ej3n4KWNjbkuhdJQTNGC"
-      );
       const url = await ngrok.connect({
-        subdomain: "slavko",
         host: "http",
         addr: `https://localhost:${port}`,
       });
